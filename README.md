@@ -146,5 +146,5 @@ If there are any issues, let me know and I'll try and get them rectified.
 
 The Mini JSON project will continue to be added to over time as it is used more and refined.  There are already a few things that need altering, but currently as the project stands it is useable and seemingly minimal on bugs.  Currently being the only user, I of course cannot state there are no bugs.  There just has to be as I can only test it so much.
 
-The first things I intend to improve with the library is the interface for retrieving data from the Variant classes.  The `get_value<T>()` function name is a bit confusing as it retrieves and pointer.
+The first things I intend to improve with the library is the interface for retrieving data from the Variant classes.  The `get_value<T>()` function name is a bit confusing as it retrieves a pointer.
 There also need to be static asserts to ensure that the type T used with `get_ref_to_value<T>()` is derived from `Variant` only.
