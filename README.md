@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 
 #### Reading a JSON file
 
-```
+```C++
 #include "{path_to_mjson_src_folder}/MJSON.hpp"
 
 int main(int argc, char *argv[])
@@ -69,7 +69,7 @@ The Variant class has a type for each JSON type:
 
 All variants can be queried for their type by checking their `Variant->m_type` member variable.
 
-```
+```C++
 if(variant->m_type == Variant::type::float_t)
 {
     //cast, assign, whatever
@@ -82,7 +82,7 @@ Strings can be accessed via the m_string member.
 
 Each of the none container type variants (Int, Bool etc.) can be cast to a concrete class of the basic type.  These also possess overloads for simple assignment to basic C++ types:
 
-```
+```C++
 using namespace MJSON;
 
 Variant* int_variant;
@@ -96,7 +96,7 @@ The `shared_ptr<ContainerVariant>` received from the `get_parsed_json()` functio
 
 To retrieve their ContainerVariant's data you must cast it to it's concrete type.  This is because each use a STL container for the underlying data structure. ` std::vector<unique_ptr<Variant>>` for VectorVariant and `std::unordered_map<std::string,unique_ptr<Variant>` for MapVariant.  So VectorVariants need an integer index and MapVariants need string keys.
 
-```
+```C++
 VectorVariant& vector_variant = *dynamic_cast<VectorVariant*>(variant_container_ptr);
 
 if(vector_variant[24]->m_type == Variant::type::bool_t)
@@ -118,7 +118,7 @@ These functions are best used for retrieving nested containers, rather than simp
 
 You can look through the JSONTestParser.cpp to see their usage, but of course, here is a simple example.
 
-```
+```C++
     JSON j;
 	j.load_src_from_string(test_json_src);
 	auto parsed_json = j.get_parsed_json();
