@@ -23,7 +23,7 @@ Mini JSON does require C++ 14 as a minimum.  This library has only been tested w
 
 Once MJSON has been added to your project, you can test everything is working as intended by running the JSONTestParser (include JSONTestParser.hpp).  Of course this means that everything is working as intended.  If you make any modifications to the code, you can rerun this test to check if anything has been unintentionally broken.
 
-```
+```C++
 #include "JSONTestParser.hpp"
 
 int main(int argc, char *argv[])
