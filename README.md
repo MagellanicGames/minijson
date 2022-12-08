@@ -93,7 +93,7 @@ int my_int = *int_obj;
 
 The `shared_ptr<ContainerVariant>` received from the `get_parsed_json()` function can be cast to either a `VectorVariant` or `MapVariant`.  You should know from your JSON src what type is expected but like the other variants this can be queried with the `m_type` member.
 
-To retrieve their ContainerVariant's data you must cast it to it's concrete type.  This is because each use a STL container for the underlying data structure. ` std::vector<unique_ptr<Variant>>` for `VectorVariant` and `std::unordered_map<std::string,unique_ptr<Variant>` for `MapVariant`.  So VectorVariants need an integer index and MapVariants need string keys.
+To retrieve their ContainerVariant's data you must cast it to it's concrete type.  This is because each use a STL container for the underlying data structure. ` std::vector<unique_ptr<Variant>>` for `VectorVariant` and `std::unordered_map<std::string,unique_ptr<Variant>` for `MapVariant`.  So `VectorVariant`s need an integer index and `MapVariant`s need string keys.
 
 ```C++
 VectorVariant& vector_variant = *dynamic_cast<VectorVariant*>(variant_container_ptr);
