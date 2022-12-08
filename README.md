@@ -75,11 +75,11 @@ if(variant->m_type == Variant::type::float_t)
 }
 ```
 
-Int, Bool, and Float can all have their data retrieved from the base Variant class by accessing the their respective m_signed_int, m_bool and m_float members (which are stored as a union).
+`Int`, `Bool`, and `Float` can all have their data retrieved from the base Variant class by accessing the their respective `m_signed_int`, `m_bool` and `m_float` members (which are stored as a union).
 
-Strings can be accessed via the m_string member.
+Strings can be accessed via the `m_string` member.
 
-Each of the none container type variants (Int, Bool etc.) can be cast to a concrete class of the basic type.  These also possess overloads for simple assignment to basic C++ types:
+Each of the none container type variants (`Int`, `Bool` etc.) can be cast to a concrete class of the basic type.  These also possess overloads for simple assignment to basic C++ types:
 
 ```C++
 using namespace MJSON;
