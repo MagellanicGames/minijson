@@ -42,13 +42,12 @@ int main(int argc, char *argv[])
 int main(int argc, char *argv[])
 {
 	MJSON::JSON json;
-    json.load_src("{path_to_json_file}");
+	json.load_src("{path_to_json_file}");
 	test.test_parser();
 
 	auto parsed_json = json.get_parsed_json();
 
-
-    //your code goes here to process the parsed json
+	//your code goes here to process the parsed json
 	return 0;
 }
 ```
@@ -119,7 +118,7 @@ These functions are best used for retrieving nested containers, rather than simp
 You can look through the JSONTestParser.cpp to see their usage, but of course, here is a simple example.
 
 ```C++
-    JSON j;
+	JSON j;
 	j.load_src_from_string(test_json_src);
 	auto parsed_json = j.get_parsed_json();
 
@@ -127,12 +126,12 @@ You can look through the JSONTestParser.cpp to see their usage, but of course, h
 
 	if(map_var.has("array_of_ints"))
 	{
-        VectorVariant& array_of_ints = map_var.get_ref_to_value<VectorVariant>("array_of_ints");
+        	VectorVariant& array_of_ints = map_var.get_ref_to_value<VectorVariant>("array_of_ints");
 
-        for(int i = 0; i < array_of_ints.size(); i++)
-        {
-            std::cout << array_of_ints[i]->m_signed_int << "\n"
-        }
+        	for(int i = 0; i < array_of_ints.size(); i++)
+        	{
+            		std::cout << array_of_ints[i]->m_signed_int << "\n"
+        	}
 	}
 
 ```
