@@ -1,3 +1,3 @@
 # Mini JSON for C++
 
-A mini json library made with C++ 17 that is easy to use. Intended for use in small scope game dev. projects.
+Mini JSON is a lighweight library made with C++ 14 intended for use with small scope game dev. projects.
