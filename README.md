@@ -13,7 +13,7 @@ Simply copy the files to your project and include "MJSON.hpp" to use.  All code 
 
 Compiled binaries to link to will be coming in the future.
 
-Mini JSON does require C++ 14 as a minimum.  This library has only been tested with G++ 11.3.0, so outside of the I can't help.  I will be testing it with MSVC when I have chance, but the intention is that this library should be easily usable with any compiler supporting C++ 14.
+Mini JSON does require C++ 14 as a minimum.  This library has only been tested with G++ 11.3.0, so outside of that I can't help.  I will be testing it with MSVC when I have chance, but the intention is that this library should be easily usable with any compiler supporting C++ 14.
 
 
 ## Use
